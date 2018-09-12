@@ -13,6 +13,6 @@ const rootReducer = (state = initialState, action) => {
 //Store
 const store = createStore(rootReducer);
 
-//Dispatching Aciton
+//Dispatching Action
 
 //Subscription
