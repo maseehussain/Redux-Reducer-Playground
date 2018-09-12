@@ -1,3 +1,5 @@
+const redux = require("redux");
+
 //Store
 
 //Reducer
