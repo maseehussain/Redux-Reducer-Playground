@@ -67,4 +67,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect()(Counter);
+export default connect(mapStateToProps)(Counter);
