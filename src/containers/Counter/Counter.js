@@ -56,7 +56,9 @@ class Counter extends Component {
         <hr />
         <button onClick={this.props.onStoreResult}>Store Result</button>
         <ul>
-          <li onClick={this.props.onDeleteResult} />
+          {this.props.storedResults.map(strResult => (
+            <li onClick={this.props.onDeleteResult} />
+          ))}
         </ul>
       </div>
     );
