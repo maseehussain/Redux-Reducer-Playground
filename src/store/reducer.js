@@ -6,9 +6,9 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "INCREMENT":
-      return {
-        counter: state.counter + action.val
-      };
+      const newState = Object.asign({}, state);
+      newState.counter = state.counter.val;
+      return newState;
     case "DECREMENT":
       return {
         counter: state.counter - action.val
@@ -20,6 +20,10 @@ const reducer = (state = initialState, action) => {
     case "SUBTRACT":
       return {
         counter: state.counter - action.val
+      };
+    case "STORE_RESULT":
+      return {
+        results: state.counter
       };
     default:
       return state;
