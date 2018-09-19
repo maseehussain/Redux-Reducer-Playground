@@ -76,6 +76,10 @@ const mapDispatchToProps = dispatch => {
     onDecrementCounter: () =>
       dispatch({
         type: "DECREMENT"
+      }),
+    onAddCounter: () =>
+      dispatch({
+        type: "ADD"
       })
   };
 };
