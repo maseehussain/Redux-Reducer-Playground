@@ -77,6 +77,10 @@ const mapDispatchToProps = dispatch => {
     onAddCounter: () =>
       dispatch({
         type: "ADD"
+      }),
+    onSubtractCounter: () =>
+      dispatch({
+        type: "SUBTRACT"
       })
   };
 };
