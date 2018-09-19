@@ -55,6 +55,9 @@ class Counter extends Component {
         />
         <hr />
         <button>Store Result</button>
+        <ul>
+          <li />
+        </ul>
       </div>
     );
   }
@@ -87,6 +90,10 @@ const mapDispatchToProps = dispatch => {
       dispatch({
         type: "SUBTRACT",
         val: 5
+      }),
+    onStoreResult: () =>
+      dispatch({
+        type: "STORE_RESULT"
       })
   };
 };
