@@ -33,7 +33,9 @@ const reducer = (state = initialState, action) => {
       // const id = 2;
       // const newArray = [...state.results];
       // newArray.splice(id, 1);
-      const updatedArray = state.result.filter((result, index) => index !== id);
+      const updatedArray = state.results.filter(
+        result => result.id !== action.resultElementId
+      );
       return {
         ...state,
         results: newArray
