@@ -98,9 +98,10 @@ const mapDispatchToProps = dispatch => {
       dispatch({
         type: "STORE_RESULT"
       }),
-    onDeleteResult: () =>
+    onDeleteResult: id =>
       dispatch({
-        type: "DELETE_RESULT"
+        type: "DELETE_RESULT",
+        resultElementId: id
       })
   };
 };
