@@ -98,7 +98,7 @@ const mapDispatchToProps = dispatch => {
         type: actionTypes.SUBTRACT,
         val: 5
       }),
-    onStoreResult: () =>
+    onStoreResult: result =>
       dispatch({
         type: actionTypes.STORE_RESULT
       }),
