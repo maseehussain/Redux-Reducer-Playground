@@ -41,7 +41,7 @@ export const saveResult = res => {
 export const storeResult = res => {
   return dispatch => {
     setTimeout(() => {
-      dispatch(saveResult);
+      dispatch(saveResult(res));
     }, 2000);
   };
 };
