@@ -14,6 +14,8 @@ const rootReducer = combineReducers({
   res: resultReducer
 });
 
+const logger =
+
 const store = createStore(rootReducer);
 
 ReactDOM.render(
