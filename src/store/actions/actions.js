@@ -20,25 +20,27 @@ export const decrement = () => {
 export const add = value => {
   return {
     type: ADD,
-    val: 5
+    val: value
   };
 };
 
-export const subtract = () => {
+export const subtract = value => {
   return {
     type: SUBTRACT,
-    val: 5
+    val: value
   };
 };
 
-export const storeResult = () => {
+export const storeResult = res => {
   return {
-    type: STORE_RESULT
+    type: STORE_RESULT,
+    result: res
   };
 };
 
-export const deleteResult = () => {
+export const deleteResult = resElId => {
   return {
-    type: DELETE_RESULT
+    type: DELETE_RESULT,
+    resultElId: resElId
   };
 };
