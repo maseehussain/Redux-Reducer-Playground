@@ -19,7 +19,7 @@ const logger = store => {
     return action => {
       console.log("[Middleware] dispatching", action);
       const result = next(action);
-      console.log("[Middleware] next state", store.nextState());
+      console.log("[Middleware] next state", store.getState());
       return result;
     };
   };
