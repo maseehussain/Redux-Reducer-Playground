@@ -18,7 +18,8 @@ const logger = store => {
   return next => {
     return action => {
       console.log("[middleware] dispatching", action);
-      next(action);
+      const result = next(action);
+      return result;
     };
   };
 };
