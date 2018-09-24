@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { increment } from "../../store/actions/actions";
+import { increment, decrement } from "../../store/actions/actions";
 
 import CounterControl from "../../components/CounterControl/CounterControl";
 import CounterOutput from "../../components/CounterOutput/CounterOutput";
@@ -83,10 +83,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     onIncrementCounter: () => dispatch(increment()),
-    onDecrementCounter: () =>
-      dispatch({
-        type: actionTypes.DECREMENT
-      }),
+    onDecrementCounter: () => dispatch(decrement()),
     onAddCounter: () =>
       dispatch({
         type: actionTypes.ADD,
