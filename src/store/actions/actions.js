@@ -32,6 +32,11 @@ export const subtract = value => {
 };
 
 export const storeResult = res => {
+  return dispatch => {
+    setTimeout(() => {
+      dispatch();
+    }, 2000);
+  };
   return {
     type: STORE_RESULT,
     result: res
