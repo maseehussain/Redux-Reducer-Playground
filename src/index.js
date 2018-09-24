@@ -25,9 +25,12 @@ const logger = store => {
   };
 };
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(rootReducer, applyMiddleware(logger));
+const store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(logger))
+);
 
 ReactDOM.render(
   <Provider store={store}>
