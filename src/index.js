@@ -14,7 +14,9 @@ const rootReducer = combineReducers({
   res: resultReducer
 });
 
-const logger =
+const logger = store => {
+  return next => {};
+};
 
 const store = createStore(rootReducer);
 
