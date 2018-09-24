@@ -17,15 +17,17 @@ export const decrement = () => {
   };
 };
 
-export const add = () => {
+export const add = value => {
   return {
-    type: ADD
+    type: ADD,
+    val: 5
   };
 };
 
 export const subtract = () => {
   return {
-    type: SUBTRACT
+    type: SUBTRACT,
+    val: 5
   };
 };
 
